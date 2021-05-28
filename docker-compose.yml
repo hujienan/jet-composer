@@ -1,0 +1,8 @@
+version: "3.9"
+services: 
+  composer_install:
+    container_name: composer_install
+    image: jet/jet-composer
+    volumes:
+      - ./project:/app
+    command:  composer install --ignore-platform-reqs
